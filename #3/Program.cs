@@ -1,9 +1,12 @@
-﻿// В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99] ????
-Console.WriteLine($"Количество элементов из отрезка [10,99]: {99-10+1}");
+﻿// В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99] ???
+int lowest1 = 10;
+int hightest1 = 99;
+Console.WriteLine($"Количество элементов из отрезка [10,99]: {hightest1-lowest1+1}");
+Console.WriteLine();
 
 
 // Из одномерного массива из 123 чисел ВЫВЕСТИ ЭЛЕМЕНТЫ из отрезка [10,99]
-/*
+
 int[] CreateArray(int length, int lowest, int hightest){
     int[] array = new int[length];
     Random random = new Random();
@@ -15,6 +18,8 @@ int[] CreateArray(int length, int lowest, int hightest){
 void PrintArray(int[] array){
     foreach (int element in array)
         Console.Write($"| {element} ");
+    Console.WriteLine();
+    Console.WriteLine();
 }
 
 int[] CreateNewArray(int[] array, int newLowest, int newHightest){
@@ -37,7 +42,4 @@ int newHightest = 99;
 int[] array = CreateArray(length, lowest, hightest);
 
 PrintArray(array);
-Console.WriteLine();
-Console.WriteLine();
 PrintArray(CreateNewArray(array, newLowest, newHightest));
-*/
