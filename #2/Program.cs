@@ -11,6 +11,7 @@ int[] CreateArray(int length, int lowest, int hightest){
 void PrintArray(int[] array){
     foreach (int element in array)
         Console.Write($"| {element} ");
+    Console.WriteLine();
 }
 
 int ReadInt(string message)
@@ -26,12 +27,11 @@ int FindAnEvenNumber(int[] array){
     return count;
 }
 
-int length = ReadInt("Введите длину массива: ");;
+int length = ReadInt("Введите длину массива: ");
 int lowest = 100;
 int hightest = 999;
 int[] array = CreateArray(length, lowest, hightest);
 
 PrintArray(array);
-Console.WriteLine();
 Console.WriteLine($"Количество четных чисел в массиве: {FindAnEvenNumber(array)}");
 Console.WriteLine($"Количество нечетных чисел в массиве: {array.Length-FindAnEvenNumber(array)}");
