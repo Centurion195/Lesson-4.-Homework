@@ -10,7 +10,7 @@ double[] CreateArray(int length, int lowest, int hightest){
     double[] array = new double[length];
     Random random = new Random();
     for (int i = 0; i < array.Length; i++)
-        array[i] = Convert.ToDouble(random.Next(lowest,hightest+1));
+        array[i] = Math.Round(random.NextDouble()*(hightest-lowest), 2);
     return array;
 }
 
@@ -33,7 +33,7 @@ double DifferenceMaxMin(double[] array){
 
 int length = ReadInt("Введите длину массива: ");
 int lowest = 0;
-int hightest = 10;
+int hightest = 20;
 double[] array = CreateArray(length, lowest, hightest);
 
 PrintArray(array);
